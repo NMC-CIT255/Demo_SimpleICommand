@@ -10,13 +10,19 @@ namespace Demo_SimpleICommand.Models
     {
         private IList<Riddle> riddleCollection { get; set; }
 
-        public string TestProperty { get; set; }
 
         public AppWindowViewModel(IList<Riddle> riddles)
         {
             riddleCollection = riddles;
-            TestProperty = "Bozo";
         }
+
+        private string _currentRiddle;
+
+        public string CurrentRiddle
+        {
+            get { return GetRiddle().Question; }
+        }
+
 
         public Riddle GetRiddle()
         {

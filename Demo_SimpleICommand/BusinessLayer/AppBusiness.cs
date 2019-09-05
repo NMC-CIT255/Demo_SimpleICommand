@@ -10,9 +10,7 @@ namespace Demo_SimpleICommand.BusinessLayer
 {
     public class AppBusiness
     {
-        private IList<Riddle> riddles = new List<Riddle>();
-
-
+        private IList<Riddle> riddles = AppData.GetRiddles();
 
         public AppBusiness()
         {

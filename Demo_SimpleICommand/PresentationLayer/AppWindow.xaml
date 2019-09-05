@@ -23,7 +23,7 @@
         <Label
             Grid.Row="0"
             Grid.Column="1"
-            Content="{Binding TestProperty}"/>
+            Content="{Binding CurrentRiddle}"/>
 
     </Grid>
 </Window>
