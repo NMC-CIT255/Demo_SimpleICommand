@@ -10,12 +10,17 @@ namespace Demo_SimpleICommand.BusinessLayer
 {
     public class AppBusiness
     {
-        readonly IList<Riddle> riddles = AppData.GetRiddles();
+        private IList<Riddle> riddles = new List<Riddle>();
 
-        //AppWindowViewModel appWindowViewModel = new AppWindowViewModel(riddles);
 
-        AppWindow appWindow = new AppWindow();
-        
 
+        public AppBusiness()
+        {
+            AppWindowViewModel appWindowViewModel = new AppWindowViewModel(riddles);
+
+            AppWindow appWindow = new AppWindow();
+            appWindow.DataContext = appWindowViewModel;
+            appWindow.Show();
+        }
     }
 }
